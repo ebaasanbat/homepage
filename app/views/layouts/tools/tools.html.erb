@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+
+    <title>Hitechlab</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <!-- Core CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <!-- Custom CSS -->
+    <%= stylesheet_link_tag    'application-all', media: 'all' %>
+    <%= stylesheet_link_tag    'application-tools', media: 'all'  %>
+
+    <%= javascript_include_tag 'application-all' %>
+    <%= csrf_meta_tags %>
+    <%= action_cable_meta_tag %>
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+
+                <li class="sidebar-brand">
+                    <a href="#" id="menu-hide">
+                        <i class="zmdi zmdi-memory"></i>
+                        <span class="light">HITECH</span>LAB
+                        <i class="zmdi zmdi-view-dashboard" id="mobile-hide"></i>
+                    </a>
+
+                </li>
+                <li>
+                    <%= link_to('Tools', tools_url) %>
+                </li>
+                <li>
+                    <%= link_to('出欠確認', tools_attendance_url) %>
+                </li>
+                <li>
+                    <%= link_to('業務日誌', tools_notes_url) %>
+                </li>
+		<li>|</li>
+		<li>
+		    <%= link_to('パスワード更新', edit_user_url) %>
+		</li>
+ 		<li>
+                    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+                </li>
+                <!-- <li>
+                    <a href="/tools/csvtostruct">CSV to Struct</a>
+                </li> -->
+
+            </ul>
+        </div>
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">
+                            <i class="zmdi zmdi-view-dashboard"></i>
+                            メニュー</a>
+
+                        <%= yield %>
+
+                        <div class="col-md-offset-2 col-md-8">
+                            <% if notice.present? %>
+                            <div class="alert alert-dismissable alert-success">
+                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                <p><%= notice %></p>
+                            </div>
+                            <% end %>
+
+                            <% if alert.present? %>
+                            <div class="alert alert-dismissable alert-danger">
+                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                <p><%= alert %></p>
+                            </div>
+                            <% end %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $("#menu-toggle").click(function (e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+            $("#menu-hide").click(function (e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+        </script>
+        <%= javascript_include_tag 'application-tools' %>
+    </body>
+
+</html>

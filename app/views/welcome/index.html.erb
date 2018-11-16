@@ -1,0 +1,148 @@
+<!-- Intro Header -->
+<header class="intro">
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h1 class="brand-heading">
+                        <span class="light">HiTECH</span>LAB</h1>
+                    <p class="intro-text">有限会社ハイテクラボ</p>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="miscellaneous-section section-content" data-stellar-vertical-offset="-150" data-stellar-background-ratio="0.5" id="about">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="intro-text white-bg">
+                    <h2>この会社は</h2>
+                    <p>テキスト</p>
+                </div>
+            </div>
+
+
+            <div class="col-md-6">
+                <!-- tab-wrap -->
+                <div class="tab-wrap white-bg">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="active"><a href="#agent" role="tab" data-toggle="tab"><b>事業内容</b></a></li>
+                        <li><a href="#quote" role="tab" data-toggle="tab"><b>社長から</b></a></li>
+                        <li><a href="#answer" role="tab" data-toggle="tab"><b>取り組み</b></a></li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="agent">
+                            テキスト
+                            <div class="img-responsive"><%= image_tag "agent-bg.jpg" %></div>
+                        </div>
+
+                        <div class="tab-pane fade" id="quote">
+                            テキスト
+                            <div class="img-responsive"><%= image_tag "agent-bg.jpg" %></div>
+                        </div>
+
+                        <div class="tab-pane fade" id="answer">
+                            テキスト
+                            <div class="img-responsive"><%= image_tag "agent-bg.jpg" %></div>
+                        </div>
+                    </div>
+                </div><!-- /tab-wrap -->
+            </div>
+        </div><!-- /row -->
+
+
+        <div class="row">
+            <div class="col-md-6">
+
+            </div>
+        </div><!-- /row -->
+    </div><!-- /container -->
+</section><!-- /miscellaneous-section -->
+
+
+<% if user_signed_in? %>
+<section id="tools" class="content-section text-center">
+    <div class="tools-section">
+        <div class="container">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>TOOLS</h2>
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="/tools" class="btn btn-default btn-lg">TOOLS</a>
+                    </li>
+                    <li>
+                        <a href="http://www.hitechlab.co.jp/temka/structure.php" class="btn btn-default btn-lg">CSV to Struct</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<% end %>
+
+
+  <!-- * * * * * * -->
+  <!-- * Footer * -->
+  <!-- * * * * * * -->
+
+  <footer class="footer text-center text-white-50">
+    <div class="container">
+      <div class="row">
+        <h2>お問い合わせ</h2>
+          <br>
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <h5 class="text-uppercase">
+          <i class="fas fa-mobile-alt fa-fw"></i>
+          電話：
+        </h5>
+          <a class="text-white-50" href="#">06-6849-8883</a>
+        </div>
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <h5 class="text-uppercase">
+          <i class="fas fa-map-marker-alt fa-fw"></i>
+          住所：</h5>
+          <div>
+              <a href="https://www.google.com/maps/place/%E3%80%92560-0036+%E5%A4%A7%E9%98%AA%E5%BA%9C%E8%B1%8A%E4%B8%AD%E5%B8%82%E8%9E%A2%E6%B1%A0%E8%A5%BF%E7%94%BA%EF%BC%92%E4%B8%81%E7%9B%AE%EF%BC%91%EF%BC%94%E2%88%92%EF%BC%91%EF%BC%94/@34.7941111,135.4394964,17z/data=!3m1!4b1!4m5!3m4!1s0x6000f07b670f0553:0xb1be5e77c365b67!8m2!3d34.7941111!4d135.4416851" target="_blank">
+            〒560-0036
+            <br>
+            大阪府豊中市螢池西町
+            <br>
+            ２丁目１４−14
+        </a>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <h5 class="text-uppercase">
+          <i class="fas fa-envelope fa-fw"></i>
+          メール:
+        </h5>
+          <a href="mailto:nishikawa@hitechlab.co.jp">nishikawa@hitechlab.co.jp</a>
+        </div>
+      </div>
+
+      <div class="footer-copyright">
+        &copy; 2018 HITECHLAB
+      </div>
+    </div>
+  </footer>
+<!--
+<section id="contact" class="container content-section text-center">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2>お問い合わせ</h2>
+            <p>気軽にお問い合わせください
+                <p>
+                    <a href="mailto:nishikawa@hitechlab.co.jp">nishikawa@hitechlab.co.jp</a>
+                </br>
+                TEL: 06-6849-8883</br>
+            FAX: 06-6849-5337
+        </div>
+    </div>
+</section>
+-->

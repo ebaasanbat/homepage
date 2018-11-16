@@ -1,0 +1,23 @@
+<html>
+<body>
+<div class="container">
+    	<div class="row">
+    		<div class="wrapper">
+
+    			<% @tools_note.each do |note| %>
+    			<h1><%= link_to note.title%></h1>
+    			<p2><%= note.created_at.strftime('%m月%d日') %></p2>
+    			<% end %>
+				<br>
+
+				<button type="button" class="btn btn-default btn-sm" ><%= link_to "New Note", new_tools_note_path%></button>
+                <button type="button" class="btn btn-default btn-sm" ><%= link_to "Tools", tools_path%></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

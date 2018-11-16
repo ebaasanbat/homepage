@@ -1,0 +1,16 @@
+<%= include_gon(:init => true) %>
+<h3>
+    <span class="light">出欠</span>確認<span class="light">
+    <%= current_user.username.upcase %></span></h3>
+<% if not current_user.admin? %>
+    <p> 出勤時間を入力して下さい.　休みの場合、カレンダーを操作して下さい </p>
+    <%= render 'form' %>
+    <br/>
+<% end %>
+
+<div id="calendar"></div>
+<script type="text/javascript">
+document.getElementById("send").onclick = function(){
+location.href = "www.hitechlab.jp/tools/attendance";
+};
+</script>

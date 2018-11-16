@@ -1,0 +1,12 @@
+    <div class="container">
+    	<div class="row">
+    		<div class="wrapper">
+				<h1><%= @tools_note.title %> </h1>
+				<p1><%= @tools_note.content %> </p1>
+				<br>
+				<button type="button" class="btn btn-default btn-sm" ><%= link_to "All Notes", tools_notes_path(@tools_note) %></button>
+				<button type="button" class="btn btn-default btn-sm" ><%= link_to "Edit", edit_tools_note_path(@tools_note) %></button>
+				<button type="button" class="btn btn-default btn-sm" ><%= button_to "Delete", tools_note_path(@tools_note), method: :delete, data: { confirm: "Are you sure?"} %></button>
+</div>
+</div>
+</div>

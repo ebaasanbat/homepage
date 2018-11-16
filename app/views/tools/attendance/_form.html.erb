@@ -1,0 +1,8 @@
+
+
+  <%= bootstrap_form_for(@tools_attendance_event,layout: :inline, action: "/") do |f| %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <%= f.hidden_field :title, value: "出勤" %>
+    <%= f.text_field :start , hide_label: true, value: DateTime.current().strftime("%Y-%m-%dT%H:%m"), type: "datetime-local" %>
+    <%= f.submit "送信", id: "send" %>
+  <% end %>

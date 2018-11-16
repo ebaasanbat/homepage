@@ -1,0 +1,6 @@
+	<%= bootstrap_form_for(@tools_note,layout: :inline, action: "/") do |f| %>
+	  <%= f.hidden_field :user_id, value: current_user.id %>
+	  <%= f.text_field :title %>
+	  <%= f.text_area :content,:size=>"50x10" %>
+	  <%= f.submit :submit%>
+	<% end %>

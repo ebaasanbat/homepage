@@ -1,0 +1,50 @@
+<header class="intro">
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                  <div class="panel panel-default devise-bs">
+                    <div class="panel-heading">
+                      <h4><%= t('.sign_in', :default => "Sign in") %></h4>
+                    </div>
+                    <div class="panel-body">
+
+                      <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { role: "form" }) do |f| %>
+                        <div class="form-group">
+                          <%= f.label :username %>
+                          <%= f.text_field :username, autofocus: true, class: "form-control" %>
+                        </div>
+                        <div class="form-group">
+                          <%= f.label :password %>
+                          <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+                        </div>
+                        <% if devise_mapping.rememberable? %>
+                          <div class="checkbox">
+                            <%= f.label :remember_me do %>
+                              <%= f.check_box :remember_me %> <%= t('.remember_me', :default => "Remember me") %>
+                            <% end %>
+                          </div>
+                        <% end %>
+                        <%= f.submit  t('.sign_in', :default => "Sign in"), class: "btn btn-default" %>
+                      <% end %>
+                    </div>
+<% if notice.present? %>
+  <div class="alert alert-dismissable alert-success">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <p><%= notice %></p>
+  </div>
+<% end %>
+
+<% if alert.present? %>
+  <div class="alert alert-dismissable alert-danger">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <p><%= alert %></p>
+  </div>
+<% end %>
+
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
